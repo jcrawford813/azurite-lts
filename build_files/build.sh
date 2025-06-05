@@ -11,10 +11,10 @@ dnf install epel-release -y
 
 dnf update -y
 
-dnf group -y install "KDE Plasma Workspaces"
+dnf group -y install "KDE Plasma Workspaces" --allowerasing
 
 #Install Flatpak
-dnf install flatpak -y
+dnf install flatpak -y --allowerasing
 
 #Install other tooling
 dnf install distrobox \
@@ -31,7 +31,7 @@ dnf install distrobox \
         logiops \
         solaar \
         plasma-firewall-firewalld \
-        flatpak-kcm -y
+        flatpak-kcm -y --allowerasing
 
 #### Example for enabling a System Unit File
 
