@@ -6,7 +6,11 @@ set -ouex pipefail
 
 #Install Plasma
 dnf config-manager --set-enabled crb
+/usr/bin/crb enable
+
 dnf install epel-release -y
+
+dnf update -y
 
 dnf group -y install "KDE Plasma Workspaces"
 
