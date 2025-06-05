@@ -6,7 +6,7 @@ set -ouex pipefail
 
 #Install Plasma
 dnf config-manager --set-enabled crb
-dnf install epel-release
+dnf install epel-release -y
 
 dnf group -y install "KDE Plasma Workspaces"
 
@@ -28,7 +28,7 @@ dnf install distrobox \
         logiops \
         solaar \
         plasma-firewall-firewalld \
-        flatpak-kcm
+        flatpak-kcm -y
 
 #### Example for enabling a System Unit File
 
