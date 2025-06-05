@@ -11,27 +11,14 @@ dnf install epel-release -y
 
 dnf update -y
 
-dnf group -y install "KDE Plasma Workspaces" --allowerasing
+dnf group -y install "KDE Plasma Workspaces" --allowerasing --nobest
 
 #Install Flatpak
-dnf install flatpak -y --allowerasing
+#dnf install flatpak -y --allowerasing
 
 #Install other tooling
-dnf install distrobox \
-        rsms-inter-fonts \
-        libvirt-daemon-config-network \
-        libvirt-daemon-kvm \
-        swtpm-selinux \
-        fish \
-        qemu-kvm \ 
-        virt-manager \
-        ksshaskpass \
-        vorta \
-        borgbackup \
-        logiops \
-        solaar \
-        plasma-firewall-firewalld \
-        flatpak-kcm -y --allowerasing
+dnf install distrobox libvirt-daemon-config-network libvirt-daemon-kvm swtpm-selinux qemu-kvm virt-manager -y --allowerasing
+dnf install fish borgbackup plasma-firewall-firewalld -y --allowerasing
 
 #### Example for enabling a System Unit File
 
