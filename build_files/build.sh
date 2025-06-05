@@ -6,7 +6,6 @@ set -ouex pipefail
 
 #Install Plasma
 dnf config-manager --set-enabled crb
-/usr/bin/crb enable
 
 dnf install epel-release -y
 
