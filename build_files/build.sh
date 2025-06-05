@@ -5,7 +5,10 @@ set -ouex pipefail
 ### Install packages
 
 #Install Plasma
-dnf --enablerepo=epel,crb group -y install "KDE Plasma Workspaces"
+dnf config-manager --set-enabled crb
+dnf install epel-release epel-next-release
+
+dnf group -y install "KDE Plasma Workspaces"
 
 #Install Flatpak
 dnf install flatpak -y
